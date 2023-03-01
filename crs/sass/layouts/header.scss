@@ -1,0 +1,32 @@
+.header__container{
+    display: flex;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav__list{
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+.nav__item{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #2C2C2C;
+
+&:hover, &:focus {
+    text-decoration-line: underline;
+    color: #BBF330;
+}
+}
