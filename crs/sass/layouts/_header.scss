@@ -18,15 +18,15 @@
     align-items: center;
 }
 .nav__item{
-    font-family: 'Roboto';
-font-style: normal;
 font-weight: 400;
 font-size: 14px;
-line-height: 16px;
-color: #2C2C2C;
+line-height: 1.14;
+cursor: pointer;
+transition: color $transition $timing-function;
+
 
 &:hover, &:focus {
     text-decoration-line: underline;
-    color: #BBF330;
+    color: $light-green;
 }
 }

@@ -1,0 +1,21 @@
+@mixin mq($range) {
+    $mob:480px;
+    $tab:768px;
+    $desk:1200px;
+    @if $range==mob{
+        @media screen and (min-width:$mob) {
+            @content;
+        } }
+    @if $range==mob-only{
+        @media screen and (max-width:767px) {
+            @content;}
+        }  @else if $range==tab{
+        @media screen and (min-width:$tab) {
+            @content;
+        }
+    } @else if $range==desk{
+        @media screen and (min-width:$desk) {
+            @content;
+        }
+    }
+}
