@@ -1,8 +1,9 @@
-@import "./utils/vars";
-@import "./utils/mixins";
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
 
-@import "./base/section";
+@import "./base/section.scss";
 @import "./base/reset.scss";
+@import "./base/container";
 
 @import "./components/buttons.scss";
 @import "./layouts/customers.scss";

@@ -4,6 +4,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
     justify-content: space-between;
 }
@@ -11,6 +13,10 @@
     display: flex;
     gap: 30px;
     align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 .nav__list{
     display: flex;
@@ -21,12 +27,13 @@
 font-weight: 400;
 font-size: 14px;
 line-height: 1.14;
-cursor: pointer;
-transition: color $transition $timing-function;
+cursor: pointer; opacity: 0;
+visibility: hidden;
+pointer-events: none; opacity: 0;
+visibility: hidden;
+pointer-events: none;}
 
-
-&:hover, &:focus {
-    text-decoration-line: underline;
-    color: $light-green;
-}
+.logo {
+    width: "66px";
+    height: "52px"
 }
