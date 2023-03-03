@@ -14,24 +14,33 @@
     gap: 30px;
     align-items: center;
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    
+
+    @include mq(mob-only) {
+        display: none;
+    }
+
+
 }
 .nav__list{
     display: flex;
     gap: 28px;
     align-items: center;
 }
+
 .nav__item{
 font-weight: 400;
 font-size: 14px;
 line-height: 1.14;
-cursor: pointer; opacity: 0;
-visibility: hidden;
-pointer-events: none; opacity: 0;
-visibility: hidden;
-pointer-events: none;}
+cursor: pointer; 
+transition: color $transition $timing-function;
+
+&:hover, &:focus {
+    text-decoration: underline;
+    color: $light-green;
+}
+
+}
 
 .logo {
     width: "66px";
