@@ -10,11 +10,16 @@ padding-bottom: 60px;
 }
 
 .title{
-    font-family: 'Roboto';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
-font-size: 42px;
+font-size: 28px;
 line-height: 1.17;
+
+@include mq(tab) {
+    font-size: 42px;
+}
+
 }
 .section__text {
     font-weight: 400;

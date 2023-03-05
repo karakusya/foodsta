@@ -1,0 +1,50 @@
+.favorites__container {
+    text-align: center;
+    align-items: center;
+}
+
+.favorites__title {
+    margin-bottom: 20px;
+}
+
+.favorites_text {
+    margin-bottom: 60px;
+}
+
+.favorites__list {
+    justify-content: center;
+}
+
+.favorites__item {
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: $yellow;
+    border-width: 11px;
+    border-radius: 50%;
+    padding: 17px;
+    width: 100%;
+
+    @include mq(tab) {
+        border-width: 14px;
+        border-radius: 50%;
+        width: calc((100% - 32px) / 2);
+    }
+
+    @include mq(desk) {
+        border-width: 16px;
+        border-radius: 50%;
+        width: calc((100% - 64px) / 3);
+    }
+
+}
+
+.favorites__item:nth-last-child(-n+3) {
+    @include mq(mob-only) {
+        display: none;
+    }
+}
+
+.favorites__item img {
+    width: 100%;
+}

@@ -18,4 +18,17 @@ transition: background-color $transition $timing-function;
 &:hover, &:focus{
 background-color: $hover-green;
 }
+
+}
+
+.offerings .order-button{
+   
+    background: #FFFFFF;
+    border: 2px solid $dark-green;
+    border-radius: 30px;
+    transition: border-color $transition $timing-function;
+    &:hover, &:focus{
+        border: 2px solid $button-hover-green;
+
+    }
 }
