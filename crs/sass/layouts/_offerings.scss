@@ -1,3 +1,38 @@
+.offerings {
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/offerings/fon-mob@1x_sm.webp);
+
+    @include mq(retina) {
+        background-image: url(../../images/offerings/fon-mob@2x_sm.png);
+      }
+    
+      @include mq(tab) {
+        max-width: 768px;
+        padding: 0 0 100px 0;
+        margin-top: -100px;
+        background-image: url(../../images/offerings/fon-tab@1x_md.png);
+        background-repeat: no-repeat;
+    
+        @include mq(retina) {
+          background-image: url(../../images/offerings/fon-tab@2x_md.png);
+        }
+      }
+    
+      @include mq(desk) {
+        max-width: 1280px;
+        margin-top: -220px;
+        padding: 171px 0 75px 0;
+        background-image: url(../../images/offerings/fon-desk@1x_lg.png);
+        background-repeat: no-repeat;
+    
+        @include mq(retina) {
+          background-image: url(../../images/offerings/fon-desk@2x_lg.png);
+        }
+      }
+    }
+
 .offerings__content {
     max-width: 526px;
 }

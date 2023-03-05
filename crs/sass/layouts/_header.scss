@@ -8,6 +8,7 @@
     margin-right: auto;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
 }
 .nav{
     display: flex;
@@ -45,4 +46,19 @@ transition: color $transition $timing-function;
 .logo {
     width: "66px";
     height: "52px"
+}
+
+.menu-open{
+    background-color: transparent;
+    border: none;
+    transition: fill $transition $timing-function;
+    
+    &:hover, &:focus {
+        fill: $dark-green;
+    }
+
+    @include mq(tab) {
+        display: none;
+    }
+
 }

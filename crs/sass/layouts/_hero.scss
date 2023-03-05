@@ -1,12 +1,13 @@
 
 .hero__title {
     font-weight: 700;
-font-size: 28px;
-line-height: 1.17;
-width: 100%;
+font-size: 27px;
+line-height: 1.2;
+margin-bottom: 28px;
 
-@include mq(tab) {
+@include mq(tab-only) {
     font-size: 42px;
+    margin-bottom: 44px;
 }
 
 @include mq(desk) {
@@ -14,29 +15,36 @@ width: 100%;
 }
 
 }
+.hero__text {
+    font-weight: 400;
+    font-size: 14px;
+line-height: 1.5;
+margin-bottom: 28px;
+@include mq (tab) {
+    font-size: 16px;
+    max-width: 336px;
+    margin-bottom: 40px;
+}
 
+@include mq(desk) {
+    max-width: 100%;
+}
+}
 .hero__container {
     display: flex;
     position: relative;
-    align-items: center;
-    justify-content: space-between;
-
+    padding-top: 60px;
+    padding-bottom: 50px;
     @include mq(tab) {
-        max-width: 537px;
+        padding-bottom: 74px; }
+      @include mq(desk) {
+          padding-top: 14px;
     }
-    
-    @include mq(desk) {
-        max-width: 502px;
-        padding-top: 60px;
-        padding-bottom: 50px;
-    }
-
 }
 .hero__content {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 28px;
 
 @include mq(tab) {
     max-width: 537px;
@@ -44,6 +52,45 @@ width: 100%;
 
 @include mq(desk) {
     max-width: 502px;
+    align-self: center;
 }
 
+}
+
+.swiper-container {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+@include mq(mob-only){
+    display: none;
+}
+
+@include mq(tab-only) {
+        position: absolute;
+        right: 32px;
+        bottom: 0;
+        max-width: 330px;
+    }
+@include mq(desk) {
+    max-width: 580px;
+    margin-left: auto;
+}
+}
+
+.swiper {
+border-radius: 50%;
+
+@include mq(tab) {
+    border: 14px solid $yellow;
+}
+@include mq(desk) {
+    border: 16px solid $yellow;
+}
+}
+.hero__img img{
+    @include mq(desk){
+    width: 580px;}
 }

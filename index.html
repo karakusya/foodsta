@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.min.css">
     <link rel="stylesheet" href="./modern-normalise.css">
 </head>
@@ -20,15 +19,37 @@
             </a>
             <div class="nav">
                 <ul class="list nav__list">
-                    <li class="nav__item">Home</li>
-                    <li class="nav__item">About</li>
-                    <li class="nav__item">Service</li>
-                    <li class="nav__item">Menu</li>
-                    <li class="nav__item">Contact</li>
+                    <li class="nav__item">Order</li>
+                    <li class="nav__item">Offerings</li>
+                    <li class="nav__item">Favorites</li>
+                    <li class="nav__item">Feedback</li>
+                    <li class="nav__item">Subscribe</li>
                 </ul>
                 <button class="button nav-button order-button">Order now</button>
             </div>
+                   <button class="menu-open" type="button" data-menu-open>
+                        <svg width="28" height="28" class="header__menu">
+                            <use href="./crs/images/icons.svg#icon-header_menu"></use>
+                        </svg>
+            </button>
         </div>
+       <div class="menu">
+            <div class="menu__container" data-menu>
+                <button class="menu-close" type="button" data-menu-close>
+                    <svg class="header__cross" width="24" height="24">
+                        <use href="./crs/images/icons.svg#icon-close_menu">
+                        </use>
+                    </svg>            
+                </button>
+                <ul class="list menu__list">
+                    <li class="menu__item">Order</li>
+                    <li class="menu__item">Offerings</li>
+                    <li class="menu__item">Favorites</li>
+                    <li class="menu__item">Feedback</li>
+                    <li class="menu__item">Subscribe</li>
+                </ul>
+            </div>
+       </div>
     </header>
 
     <main>
@@ -40,22 +61,43 @@
                     <button class="button hero-button order-button">Order now</button>
                 </div>
                 <div class="swiper-container">
-                    <picture class="hero-img1">
-                        <source media="(min-width: 1280px)" srcset="./crs/images/hero/hero1lg@1x.webp 1x, ./crs/images/hero/hero1lg@2x.webp 2x" type="image/webp">
-                        <source media="(min-width: 1280px)" srcset="./crs/images/hero/hero1lg@1x.png 1x, ./crs/images/hero/hero1lg@2x.png 2x" type="image/png">
-
-                        <source media="(min-width: 768px)" srcset="./crs/images/hero/hero1md@1x.webp 1x, ./crs/images/hero/hero1md@2x.webp 2x" type="image/webp">
-                        <source media="(min-width: 768px)" srcset="./crs/images/hero/hero1md@1x.png 1x, ./crs/images/hero/hero1md@2x.png 2x" type="image/png">
-
-                        <img src="./crs/images/hero/hero1lg@1x.png" alt="hero-dish" width="292" height="292">
-                    </picture>
+                    <div class="swiper">
+                        <div class="hero__img">
+                            <picture >
+                                <source media="(min-width: 1280px)" srcset="./crs/images/hero/hero1lg@1x.webp 1x, ./crs/images/hero/hero1lg@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1280px)" srcset="./crs/images/hero/hero1lg@1x.png 1x, ./crs/images/hero/hero1lg@2x.png 2x" type="image/png">
+        
+                                <source media="(min-width: 768px)" srcset="./crs/images/hero/hero1md@1x.webp 1x, ./crs/images/hero/hero1md@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./crs/images/hero/hero1md@1x.png 1x, ./crs/images/hero/hero1md@2x.png 2x" type="image/png">
+        
+                                <img src="./crs/images/hero/hero1lg@1x.png" alt="hero-dish" width="292" height="292">
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </section>
         <section class="offerings section">
             <div class="container offerings__container">
-                <img src="" alt="">
+                <div class="offerings__img">
+                    <picture>
+                        <source media="(min-width: 1280px)" srcset="./crs/images/offerings/apple-desk@1x_lg.webp 1x, ./crs/images/offerings/apple-desk@2x_lg.webp 2x" type="image/webp">
+                        <source media="(min-width: 1280px)" srcset="./crs/images/offerings/apple-desk@1x_lg.png 1x, ./crs/images/offerings/apple-desk@2x_lg.png 2x" type="image/png">
+                        
+                        <source media="(min-width: 768px)" srcset="./crs/images/offerings/apple-tab@1x_md.webp 1x, ./crs/images/offerings/apple-tab@2x_md.webp 2x" type="image/webp">
+                        <source media="(min-width: 768px)" srcset="./crs/images/offerings/apple-tab@1x_md.png 1x, ./crs/images/offerings/apple-tab@2x_md.png 2x" type="image/png">
+                        
+                        <source media="(max-width: 767px)" srcset="./crs/images/offerings/apple-mob@1x_sm.webp 1x, ./crs/images/offerings/apple-mob@2x_sm.webp 2x" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="./crs/images/offerings/apple-mob@1x_sm.png 1x, ./crs/images/offerings/apple-mob@2x_sm.png 2x" type="image/png">
+                        <img
+                        src="./crs/images/offerings/apple-mob@1x_sm.png"
+                        alt="apple"
+                        width="550"
+                        height="550"
+                      />
+                    </picture>
+                </div>
                 <div class="offerings__content">
                     <h2 class="title offerings__title">What’s Special About Our Offerings</h2>
                     <p class="offerings__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
@@ -205,12 +247,12 @@
            <div class="footer__content">
             <div class="footer__nav">
                 <a href="" class="logo"></a>
-                <ul class="list nav__list">
-                    <li class="nav__item">Home</li>
-                    <li class="nav__item">About</li>
-                    <li class="nav__item">Service</li>
-                    <li class="nav__item">Menu</li>
-                    <li class="nav__item">Contact</li>
+                <ul class="list footer-nav__list">
+                    <li class="footer-nav__item">Order</li>
+                    <li class="footer-nav__item">Offerings</li>
+                    <li class="footer-nav__item">Favorites</li>
+                    <li class="nav__item">Feedback</li>
+                    <li class="footer-nav__item">Subscribe</li>
                 </ul>
             </div>
             <div class="footer__subscribe">
@@ -233,5 +275,6 @@
 
         </div>
     </footer>
+    <script type="module" src="./crs/js/menu.js"></script>
 </body>
 </html>

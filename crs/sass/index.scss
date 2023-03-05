@@ -1,15 +1,17 @@
-@import "./utils/vars.scss";
-@import "./utils/mixins.scss";
+@import "./utils/vars";
+@import "./utils/mixins";
 
-@import "./base/section.scss";
-@import "./base/reset.scss";
+@import "./base/section";
+@import "./base/reset";
 @import "./base/container";
 
-@import "./components/buttons.scss";
-@import "./layouts/customers.scss";
-@import "./layouts/favorites.scss";
-@import "./layouts/footer.scss";
-@import "./layouts/header.scss";
-@import "./layouts/hero.scss";
-@import "./layouts/offerings.scss";
-@import "./layouts/subscribe.scss";
+@import "./components/buttons";
+@import "./components/menu";
+
+@import "./layouts/customers";
+@import "./layouts/favorites";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/offerings";
+@import "./layouts/subscribe";
