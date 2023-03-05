@@ -1,0 +1,34 @@
+.footer{
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(/crs/images/footer/fruit-set@1x_mob.png);
+
+    @include mq(retina) {
+        background-image: url(/crs/images/footer/fruit-set@2x_mob.png);
+    }
+
+    @include mq(tab) {
+        max-width: 768px;
+
+
+        background-image: url(/crs/images/footer/fruit-set@1x_tab.png);
+        background-repeat: no-repeat;
+
+        @include mq(retina) {
+            background-image: url(/crs/images/footer/fruit-set@2x_tab.png);
+        }
+    }
+
+    @include mq(desk) {
+        max-width: 1280px;
+        background-image: url(/crs/images/footer/fruit-set@1x_desk.png);
+        background-repeat: no-repeat;
+
+        @include mq(retina) {
+            background-image: url(/crs/images/footer/fruit-set@2x_desk.png);
+        }
+    }
+
+    
+}

@@ -5,10 +5,23 @@
 
 .favorites__title {
     margin-bottom: 20px;
+   
+
 }
 
 .favorites_text {
     margin-bottom: 60px;
+ font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+    @include mq(tab) {
+        font-size: 16px;
+line-height: 1.18;
+    }
+
+    @include mq(desk) {
+     margin-bottom: 40px;
+    }
 }
 
 .favorites__list {
@@ -37,6 +50,10 @@
         width: calc((100% - 64px) / 3);
     }
 
+    transition: border-color $transition $timing-function;
+    &:hover, &:focus {
+        border-color: $light-green;
+    }
 }
 
 .favorites__item:nth-last-child(-n+3) {

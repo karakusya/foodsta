@@ -194,6 +194,42 @@ img {
   fill: #7EB101;
 }
 
+.customers {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/crs/images/customers/customers@1x_mob.png);
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .customers {
+    background-image: url(/crs/images/customers/customers@2x_mob.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .customers {
+    max-width: 768px;
+    background-image: url(/crs/images/customers/customers@1x_tab.png);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .customers {
+    background-image: url(/crs/images/customers/customers@2x_tab.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers {
+    max-width: 1280px;
+    background-image: url(/crs/images/customers/customers@1x_desk.png);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .customers {
+    background-image: url(/crs/images/customers/customers@2x_desk.png);
+  }
+}
+
 .favorites__container {
   text-align: center;
   -webkit-box-align: center;
@@ -207,6 +243,20 @@ img {
 
 .favorites_text {
   margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+}
+@media screen and (min-width: 768px) {
+  .favorites_text {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .favorites_text {
+    margin-bottom: 40px;
+  }
 }
 
 .favorites__list {
@@ -228,6 +278,8 @@ img {
   border-radius: 50%;
   padding: 17px;
   width: 100%;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .favorites__item {
@@ -243,6 +295,9 @@ img {
     width: calc((100% - 64px) / 3);
   }
 }
+.favorites__item:hover, .favorites__item:focus {
+  border-color: #BBF330;
+}
 
 @media screen and (max-width: 767px) {
   .favorites__item:nth-last-child(-n+3) {
@@ -252,6 +307,42 @@ img {
 
 .favorites__item img {
   width: 100%;
+}
+
+.footer {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/crs/images/footer/fruit-set@1x_mob.png);
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .footer {
+    background-image: url(/crs/images/footer/fruit-set@2x_mob.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+    background-image: url(/crs/images/footer/fruit-set@1x_tab.png);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .footer {
+    background-image: url(/crs/images/footer/fruit-set@2x_tab.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    max-width: 1280px;
+    background-image: url(/crs/images/footer/fruit-set@1x_desk.png);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .footer {
+    background-image: url(/crs/images/footer/fruit-set@2x_desk.png);
+  }
 }
 
 .header__container {
@@ -466,6 +557,7 @@ img {
 .offerings {
   margin: 0 auto;
   padding-top: 41px;
+  padding-bottom: 60px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url(/crs/images/offerings/fon-mob@1x_sm.png);
@@ -479,6 +571,7 @@ img {
   .offerings {
     max-width: 768px;
     padding-top: 150px;
+    padding-bottom: 100px;
     background-image: url(/crs/images/offerings/fon-tab@1x_md.png);
     background-repeat: no-repeat;
   }
@@ -491,6 +584,7 @@ img {
 @media screen and (min-width: 1200px) {
   .offerings {
     max-width: 1280px;
+    padding-bottom: 40px;
     background-image: url(/crs/images/offerings/fon-desk@1x_lg.png);
     background-repeat: no-repeat;
   }
