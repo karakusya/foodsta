@@ -1,0 +1,95 @@
+.subscribe {}
+
+.subscribe__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+    @include mq(desk) {
+        flex-direction: row-reverse;
+    }
+}
+
+.subscribe__content {
+
+    @include mq(desk) {
+       max-width: 665px; 
+    }
+
+}
+
+.subscribe__title {
+    margin-bottom: 20px;
+}
+
+.subscribe__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 40px;
+
+    @include mq(tab) {
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 24px;
+    }
+}
+
+.form__container {
+    width: 100%;
+    @include mq(tab) {
+display: flex;
+    }
+
+    @include mq(desk) {
+        
+    }
+}
+
+.subscribe__form {
+    margin-bottom: 20px;
+   
+
+   
+}
+
+.subscribe__input {
+    background: #FFFFFF;
+    border: 0.854167px solid $yellow;
+    border-radius: 30px;
+    font-weight: 400;
+font-size: 12px;
+line-height: 1.5;
+color: #505050;
+padding-left: 11px;
+padding-top: 12px;
+padding-bottom: 12px;
+width: 100%;
+
+
+ @include mq(tab) {
+width: 394px;
+    }
+
+    @include mq(desk) {
+        
+    }
+}
+
+
+
+.subscribe__img {
+    max-width: 280px;
+    margin-bottom: 17px;
+    @include mq(tab) {
+margin-left: auto;
+margin-bottom: 20px;
+    }
+
+    @include mq(desk) {
+max-width: 608px;
+    }
+}

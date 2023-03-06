@@ -294,45 +294,99 @@
             </div>
         </section>
         <section class="section customers">
-            <div class="container">
+            <div class="container customers__container">
                 <h2 class="title customers__title">What our Customers Say</h2>
                 <p class="customers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <ul class="list customers__list">
                     <li class="customers__item">
-                        <img src="" alt="" class="stars">
+                        <div class="stars">
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                        </div>
                         <p class="review__text">“The Best app I have used to order food in a while, so many options to
                             choose from too, I would recommend to a freind, No questions asked”</p>
                         <div class="customer__info">
-                            <img src="" alt="" class="customer__photo">
-                            <p class="customer__name">Sumith Shah</p>
-                            <p class="customer__status">Some Dude</p>
+                            <img scr="./crs/images/customers/boy@1x.png"
+                            srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x" type="image/png"
+                            alt="boy" width="48" height="48">                            
+                            <div class="customer__content">
+                                <p class="customer__name">Sumith Shah</p>
+                                <p class="customer__status">Some Dude</p>
+                            </div>
                         </div>
                     </li>
                     <li class="customers__item">
-                        <img src="" alt="" class="stars">
+                        <div class="stars">
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                            <svg class="star-img" width="17" height="16">
+                                <use href="./crs/images/icons.svg#star"></use>
+                            </svg>
+                        </div>
                         <p class="review__text">“The ease with which I can just go in and order what i want was amazing,
                             It has been a very pleasant experience ordering from this app”</p>
                         <div class="customer__info">
-                            <img src="" alt="" class="customer__photo">
-                            <p class="customer__name">Sumith Shah</p>
-                            <p class="customer__status">Some Dude</p>
+                            <img scr="./crs/images/customers/girl@1x.png"
+                            srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x" type="image/png"
+                            alt="girl" width="48" height="48"> 
+                            <div class="customer__content">
+                                <p class="customer__name">Sumith Shah</p>
+                                <p class="customer__status">Some Dude</p>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="section subscribe">
-            <div class="container">
+            <div class="container subscribe__container">
+                <picture class="subscribe__img">
+                    <source media="(min-width: 1280px)" srcset="./crs/images/subscribe/subscribelg@1x.webp 1x, ./crs/images/subscribe/subscribelg@2x.webp 2x" type="image/webp">
+                    <source media="(min-width: 1280px)" srcset="./crs/images/subscribe/subscribelg@1x.png 1x, ./crs/images/subscribe/subscribelg@2x.png 2x" type="image/png">
+
+                    <source media="(min-width: 768px)" srcset="./crs/images/subscribe/subscribemd@1x.webp 1x, ./crs/images/subscribe/subscribemd@2x.webp 2x" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="./crs/images/subscribe/subscribemd@1x.png 1x, ./crs/images/subscribe/subscribemd@2x.png 2x" type="image/png">
+
+                    <source media="(max-width: 787px)" srcset="./crs/images/subscribe/subscribesm@1x.webp 1x, ./crs/images/subscribe/subscribesm@2x.webp 2x" type="image/webp">
+                    <source media="(max-width: 787px)" srcset="./crs/images/subscribe/subscribesm@1x.png 1x, ./crs/images/subscribe/subscribesm@2x.png 2x" type="image/png">
+                
+                <img src="./crs/images/subscribe/subscribelg@1x.png" alt="banana" width="608" height="266">
+                </picture>
                 <div class="subscribe__content">
                     <h2 class="title subscribe__title">Subscribe To Get Special Offers</h2>
                     <p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         varius enim in eros elementum tristique.</p>
-                    <form action="submit" class="subscribe__form">
-                        <input type="text" class="subscribe__input" placeholder="Enter your email">
-                        <button class="button subscribe__button">Subscribe</button>
-                    </form>
-                </div>
-                <img src="" alt="">
+                
+                        <div class="form__container">
+                            <form action="submit" class="subscribe__form">
+                                <input type="text" class="subscribe__input" placeholder="Enter your email">
+                            </form>
+                            <button class="button subscribe__button">Subscribe</button>
+                        </div>    </div>                
+
             </div>
         </section>
 
@@ -340,34 +394,35 @@
 
     <footer class="footer">
         <div class="container footer__container">
-            <div class="footer__content">
-                <div class="footer__nav">
-                    <a href="" class="logo"></a>
+            <div class="footer__nav">
+                <a href="" class="logo">
+                    <img src="./crs/images/logo/Vector.png" alt="logo" width="69" height="51">
+                </a>
                     <ul class="list footer-nav__list">
                         <li class="footer-nav__item">Order</li>
                         <li class="footer-nav__item">Offerings</li>
                         <li class="footer-nav__item">Favorites</li>
-                        <li class="nav__item">Feedback</li>
+                        <li class="footer-nav__item">Feedback</li>
                         <li class="footer-nav__item">Subscribe</li>
                     </ul>
-                </div>
-                <div class="footer__subscribe">
+            </div>
+            <div class="footer__subscribe">
                     <h3 class="subscribe__title">Subscribe</h3>
                     <form action="submit" class="subscribe__form">
                         <input type="text" class="subscribe__input" placeholder="Enter your email">
                         <button class="button subscribe__button">Subscribe</button>
                     </form>
                     <p class="subscribe__text">By subscribing you agree to with our<a href="">Privacy Policy</a></p>
-                </div>
-                <div class="footer__privacy">
+            </div>
+            <div class="footer__privacy">
                     <ul class="privacy__list">
                         <li class="privacy__item"><a href="">Privacy Policy</a></li>
                         <li class="privacy__item"><a href="">Terms of Service</a></li>
                         <li class="privacy__item"><a href="">Cookies Settings</a></li>
                     </ul>
                     <p class="footer_licence">2022 FoodSta. All right reserved.</p>
-                </div>
             </div>
+        
 
         </div>
     </footer>

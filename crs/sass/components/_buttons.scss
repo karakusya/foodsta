@@ -31,4 +31,38 @@ background-color: $hover-green;
         border: 2px solid $button-hover-green;
 
     }
+}.subscribe__button {
+    display: block;
+    background: $light-green;
+    border-radius: 30px;
+    width: 103px;
+    height: 42px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 1.5;
+border: none;
+cursor: pointer;
+color: $text-black;
+transition: background-color $transition $timing-function;
+margin-left: auto;
+
+&:hover, &:focus{
+background-color: $hover-green;
+}
+}
+
+
+.subscribe .subscribe__button {
+
+    @include mq(tab) {
+margin-left: 22px;
+    }
+
+    @include mq(desk) {
+        margin-left: 32px;
+    }
 }
