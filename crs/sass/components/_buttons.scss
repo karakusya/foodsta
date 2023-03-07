@@ -71,7 +71,13 @@ margin-left: 22px;
     background-color: #FFFFFF;
     border: 0.854167px solid $light-green;
 border-radius: 30px;
-
+@include mq(tab) {
+    margin-left: 13px;
+        }
+    
+        @include mq(desk) {
+           
+        }
 &:hover, &:focus{
     background-color: $yellow;
 
