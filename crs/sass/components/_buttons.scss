@@ -66,3 +66,14 @@ margin-left: 22px;
         margin-left: 32px;
     }
 }
+
+.footer .subscribe__button {
+    background-color: #FFFFFF;
+    border: 0.854167px solid $light-green;
+border-radius: 30px;
+
+&:hover, &:focus{
+    background-color: $yellow;
+
+    }
+}

@@ -171,6 +171,15 @@ img {
   }
 }
 
+.footer .subscribe__button {
+  background-color: #FFFFFF;
+  border: 0.854167px solid #BBF330;
+  border-radius: 30px;
+}
+.footer .subscribe__button:hover, .footer .subscribe__button:focus {
+  background-color: #FFE550;
+}
+
 .menu__container {
   position: absolute;
   top: 50px;
@@ -495,6 +504,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 40px;
 }
 
 .footer-nav__list {
@@ -511,6 +521,24 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.subscribe__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.subscribe__text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.privacy__link {
+  color: #BBF330;
 }
 
 .header__container {
@@ -950,8 +978,10 @@ img {
     display: flex;
   }
 }
-.subscribe__form {
-  margin-bottom: 20px;
+@media screen and (max-width: 767px) {
+  .subscribe__form {
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe__input {

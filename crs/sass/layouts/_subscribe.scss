@@ -50,8 +50,9 @@ display: flex;
 }
 
 .subscribe__form {
+    @include mq(mob-only){
     margin-bottom: 20px;
-   
+    }
 
    
 }
