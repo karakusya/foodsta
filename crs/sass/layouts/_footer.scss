@@ -35,11 +35,22 @@
 
 }
 
-.footer__container {}
+.footer__content {
+
+    @include mq(desk) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 .footer__nav {
     display: flex;
     margin-bottom: 40px;
+
+    @include mq(tab) {
+        
+
+    }
 }
 
 .footer-nav__list {
@@ -56,9 +67,13 @@
         flex-direction: row;
         gap: 28px;
         margin-left: 114px;
+        padding-top: 17px;
+        padding-bottom: 17px;
     }
 
-    @include mq(desk) {}
+    @include mq(desk) {
+        margin-left: 148px;
+    }
 }
 
 .footer-nav__item {
@@ -73,10 +88,12 @@
     margin-bottom: 60px;
 
     @include mq(tab) {
-        margin-bottom: 12px;
+        margin-bottom: 100px;
     }
 
-    @include mq(desk) {}
+    @include mq(desk) {
+    
+    }
 }
 
 .subscribe__label {
@@ -86,11 +103,37 @@
     margin-bottom: 12px;
 }
 
+.footer__form {
+    margin-bottom: 20px;
+    @include mq(tab) {
+        display: flex;
+    margin-bottom: 12px;
+    }
+
+    @include mq(desk) {}
+}
+
+.footer .subscribe__input {
+    &:valid + .subscribe__validity{
+        opacity: 0;
+        }
+
+    @include mq(tab) {max-width: 279px;}
+
+    @include mq(desk) {}
+}
+
 .subscribe-form__text {
     font-weight: 400;
     font-size: 10px;
     line-height: 1.2;
-    margin-top: 20px;
+   
+
+    @include mq(tab) {
+        font-size: 12px;
+line-height: 1.4;
+
+    }
 }
 
 .privacy__link {
@@ -102,17 +145,36 @@
    font-weight: 400;
 font-size: 10px;
 line-height: 1.2;
+
+@include mq(tab) {
+    display: flex;
+    font-size: 12px;
+line-height: 1.4;
+    width: 100%;
+    justify-content: space-between;
+}
+
 }
 
 .privacy__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    
+    @include mq(tab) {
+        gap: 20px;
+        margin: 0;
+    }
+
+    @include mq(desk) {}
 }
 
 .privacy__item {
     color: $light-green;
 }
 
-.footer_licence {}
+.footer_licence {
+    @include mq(desk)
+    {
+        margin-left: 236px;
+    }
+}

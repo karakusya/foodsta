@@ -1,4 +1,10 @@
-.subscribe {}
+.subscribe {
+    margin-top: -100px;
+
+    @include mq(tab) {
+        margin-top: -170px;
+    }
+}
 
 .subscribe__container {
     display: flex;
@@ -35,6 +41,7 @@
         font-size: 16px;
         line-height: 1.18;
         margin-bottom: 24px;
+        max-width: 656px;
     }
 }
 
@@ -50,6 +57,8 @@ display: flex;
 }
 
 .subscribe__form {
+    display: flex;
+    flex-direction: column;
     @include mq(mob-only){
     margin-bottom: 20px;
     }
@@ -69,16 +78,55 @@ padding-left: 11px;
 padding-top: 12px;
 padding-bottom: 12px;
 width: 100%;
+outline: transparent;
+
+transition: border-color $transition $timing-function;
+
+
 
 
  @include mq(tab) {
 width: 394px;
     }
 
-    @include mq(desk) {
-        
+    
+}
+
+.subscribe__input:not(:placeholder-shown):required:valid{
+    border-color: $dark-green ;
+}
+
+.subscribe__input:not(:placeholder-shown):required:invalid{
+    border-color: #FF705D;
+}
+
+.subscribe__input:not(:placeholder-shown):required:invalid + .subscribe__validity {
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    @include mq(tab) {
+        display: inline;
     }
 }
+.subscribe__input::placeholder {
+    font-size: 12px;
+    color: #505050;
+    line-height: 1.5;
+}
+.subscribe__validity {
+    opacity: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #FF705D;
+    display: flex;
+align-items: center;
+    @include mq(mob-only) {
+    margin-bottom: 5px;
+    }
+    
+}
+
 
 
 
@@ -93,4 +141,10 @@ margin-bottom: 20px;
     @include mq(desk) {
 max-width: 608px;
     }
+}
+
+
+.error-img {
+    margin-right: 4px;
+    fill: #FF705D ;
 }

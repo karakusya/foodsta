@@ -36,7 +36,6 @@
     }
 
 .offerings__container {
-
     @include mq(desk) {
         display: flex;
     }

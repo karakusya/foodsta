@@ -1,3 +1,16 @@
+.hero {
+
+padding-top: 60px;
+padding-bottom: 50px;
+@include mq(tab) {
+    margin-bottom: -100px;
+    padding-bottom: 74px; }
+  @include mq(desk) {
+    margin-bottom: -170px;
+    padding-top: 14px;
+}
+}
+
 
 .hero__title {
     font-weight: 700;
@@ -33,13 +46,7 @@ margin-bottom: 28px;
 .hero__container {
     display: flex;
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    @include mq(tab) {
-        padding-bottom: 74px; }
-      @include mq(desk) {
-          padding-top: 14px;
-    }
+
 }
 .hero__content {
     width: 100%;
@@ -71,11 +78,11 @@ margin-bottom: 28px;
 @include mq(tab-only) {
         position: absolute;
         right: 32px;
-        bottom: 0;
-        max-width: 330px;
+        top: 90px;
+        max-width: 336px;
     }
 @include mq(desk) {
-    max-width: 580px;
+    max-width: 608px;
     margin-left: auto;
 }
 }
@@ -84,9 +91,11 @@ margin-bottom: 28px;
 border-radius: 50%;
 
 @include mq(tab) {
+    max-width: 320px;
     border: 14px solid $yellow;
 }
 @include mq(desk) {
+    max-width: 580px;
     border: 16px solid $yellow;
 }
 }

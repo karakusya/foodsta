@@ -27,7 +27,7 @@
                     <li class="nav__item">Feedback</li>
                     <li class="nav__item">Subscribe</li>
                 </ul>
-                <button class="button nav-button order-button">Order now</button>
+                <button class="button nav-button order-button" data-modal-open>Order now</button>
             </div>
             <button class="menu-open" type="button" data-menu-open>
                 <svg width="28" height="28" class="header__menu">
@@ -62,7 +62,7 @@
                     <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
                         enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum
                         nulla, ut commodo diam libero vitae erat.</p>
-                    <button class="button hero-button order-button">Order now</button>
+                    <button class="button hero-button order-button" data-modal-open>Order now</button>
                 </div>
                 <div class="swiper-container">
                     <div class="swiper">
@@ -90,7 +90,7 @@
             </div>
 
         </section>
-        <section class="offerings">
+        <section class="offerings section">
             <div class="container offerings__container">
                 <div class="offerings__img">
                     <picture>
@@ -142,7 +142,7 @@
                                 varius enim in eros.</p>
                         </li>
                     </ul>
-                    <button class="button order-button">Order now</button>
+                    <button class="button order-button" data-modal-open>Order now</button>
                     <a class="link offerings__link" href="">Read More<svg width="13" height="13">
                             <use href="./crs/images/icons.svg#right-arrow"></use>
                         </svg></a>
@@ -320,8 +320,8 @@
                             choose from too, I would recommend to a freind, No questions asked”</p>
                         <div class="customer__info">
                             <img scr="./crs/images/customers/boy@1x.png"
-                            srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x" type="image/png"
-                            alt="boy" width="48" height="48">                            
+                                srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x"
+                                type="image/png" alt="boy" width="48" height="48">
                             <div class="customer__content">
                                 <p class="customer__name">Sumith Shah</p>
                                 <p class="customer__status">Some Dude</p>
@@ -350,8 +350,8 @@
                             It has been a very pleasant experience ordering from this app”</p>
                         <div class="customer__info">
                             <img scr="./crs/images/customers/girl@1x.png"
-                            srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x" type="image/png"
-                            alt="girl" width="48" height="48"> 
+                                srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x"
+                                type="image/png" alt="girl" width="48" height="48">
                             <div class="customer__content">
                                 <p class="customer__name">Sumith Shah</p>
                                 <p class="customer__status">Some Dude</p>
@@ -364,40 +364,89 @@
         <section class="section subscribe">
             <div class="container subscribe__container">
                 <picture class="subscribe__img">
-                    <source media="(min-width: 1280px)" srcset="./crs/images/subscribe/subscribelg@1x.webp 1x, ./crs/images/subscribe/subscribelg@2x.webp 2x" type="image/webp">
-                    <source media="(min-width: 1280px)" srcset="./crs/images/subscribe/subscribelg@1x.png 1x, ./crs/images/subscribe/subscribelg@2x.png 2x" type="image/png">
+                    <source media="(min-width: 1280px)"
+                        srcset="./crs/images/subscribe/subscribelg@1x.webp 1x, ./crs/images/subscribe/subscribelg@2x.webp 2x"
+                        type="image/webp">
+                    <source media="(min-width: 1280px)"
+                        srcset="./crs/images/subscribe/subscribelg@1x.png 1x, ./crs/images/subscribe/subscribelg@2x.png 2x"
+                        type="image/png">
 
-                    <source media="(min-width: 768px)" srcset="./crs/images/subscribe/subscribemd@1x.webp 1x, ./crs/images/subscribe/subscribemd@2x.webp 2x" type="image/webp">
-                    <source media="(min-width: 768px)" srcset="./crs/images/subscribe/subscribemd@1x.png 1x, ./crs/images/subscribe/subscribemd@2x.png 2x" type="image/png">
+                    <source media="(min-width: 768px)"
+                        srcset="./crs/images/subscribe/subscribemd@1x.webp 1x, ./crs/images/subscribe/subscribemd@2x.webp 2x"
+                        type="image/webp">
+                    <source media="(min-width: 768px)"
+                        srcset="./crs/images/subscribe/subscribemd@1x.png 1x, ./crs/images/subscribe/subscribemd@2x.png 2x"
+                        type="image/png">
 
-                    <source media="(max-width: 787px)" srcset="./crs/images/subscribe/subscribesm@1x.webp 1x, ./crs/images/subscribe/subscribesm@2x.webp 2x" type="image/webp">
-                    <source media="(max-width: 787px)" srcset="./crs/images/subscribe/subscribesm@1x.png 1x, ./crs/images/subscribe/subscribesm@2x.png 2x" type="image/png">
-                
-                <img src="./crs/images/subscribe/subscribelg@1x.png" alt="banana" width="608" height="266">
+                    <source media="(max-width: 787px)"
+                        srcset="./crs/images/subscribe/subscribesm@1x.webp 1x, ./crs/images/subscribe/subscribesm@2x.webp 2x"
+                        type="image/webp">
+                    <source media="(max-width: 787px)"
+                        srcset="./crs/images/subscribe/subscribesm@1x.png 1x, ./crs/images/subscribe/subscribesm@2x.png 2x"
+                        type="image/png">
+
+                    <img src="./crs/images/subscribe/subscribelg@1x.png" alt="banana" width="608" height="266">
                 </picture>
                 <div class="subscribe__content">
                     <h2 class="title subscribe__title">Subscribe To Get Special Offers</h2>
                     <p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         varius enim in eros elementum tristique.</p>
-                
-                        <div class="form__container">
-                            <form action="submit" class="subscribe__form">
-                                <input type="text" class="subscribe__input" placeholder="Enter your email">
-                            </form>
-                            <button class="button subscribe__button">Subscribe</button>
-                        </div>    </div>                
+
+                    <form class="form__container" id="myForm">
+                        <div action="submit" class="subscribe__form">
+                            <input type="email" class="subscribe__input" placeholder="Enter your email" required>
+                            <span class="subscribe__validity"><svg class="error-img" width="11" height="11">
+                                <use href="./crs/images/icons.svg#errorsvg"></use>
+                            </svg>Not a valid email address (example@email.com)</span>
+                        </div>
+                        <button class="button subscribe__button" type="button" onclick="sendEmail()">Subscribe</button>
+                    </form>
+                </div>
 
             </div>
         </section>
+        <div class="backdrop backdrop--hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close-modal" data-modal-close>
+                    <svg width="24" height="24">
+                        <use href="./crs/images/icons.svg#icon-close_menu"></use>
+                    </svg>
+                </button>
+                <form class="modal__form">
+                    <strong class="modal__title">Order Form</strong>
+                    <ul class="list modal__form-group">
+                        <li class="modal__form-item">
+                            <label for="name" class="modal__label">Name</label>                                
+                            <input type="text" id="name" class="modal__input" placeholder="Your name" required>
+                        </li>
+                        <li class="modal__form-item">
+                            <label for="tel" class="modal__label">Phone number</label>
+                            <input type="tel" id="tel" inputmode="tel"
+                                    pattern="+38(0[0-9]{2}[0-9]{3} [0-9]{2} [0-9]{2})" class="modal__input"
+                                    placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required>
 
+                        </li>
+                        <li class="modal__form-item">
+                            <label for="email" class="modal__label">E-mail</label>
+                            <input type="email" id="email" inputmode="email" class="modal__input"
+                                    placeholder="example@gmail.com" required>
+
+                        </li>
+                    </ul>
+                    <button type="button" class="send__button">Send</button>
+                    </form>
+                
+            </div>
+        </div>
     </main>
 
     <footer class="footer section">
         <div class="container footer__container">
-            <div class="footer__nav">
-                <a href="" class="logo">
-                    <img src="./crs/images/logo/Vector.png" alt="logo" width="69" height="51">
-                </a>
+            <div class="footer__content">
+                <div class="footer__nav">
+                    <a href="" class="logo">
+                        <img src="./crs/images/logo/Vector.png" alt="logo" width="69" height="51">
+                    </a>
                     <ul class="list footer-nav__list">
                         <li class="footer-nav__item">Order</li>
                         <li class="footer-nav__item">Offerings</li>
@@ -405,28 +454,58 @@
                         <li class="footer-nav__item">Feedback</li>
                         <li class="footer-nav__item">Subscribe</li>
                     </ul>
-            </div>
-            <div class="footer__subscribe">
+                </div>
+                <div class="footer__subscribe">
                     <h3 class="subscribe__label">Subscribe</h3>
-                    <form action="submit" class="subscribe__form">
-                        <input type="text" class="subscribe__input" placeholder="Enter your email">
-                    </form>
-                    <button type="button" class="button subscribe__button">Subscribe</button>
-                    <p class="subscribe-form__text">By subscribing you agree to with our <a class="privacy__link" href="#" target="_blank" rel="noopener nofollow noreferrer">Privacy Policy</a></p>
+                    <div class="footer__form">
+                        <form action="submit" class="subscribe__form">
+                            <input type="email" class="subscribe__input" placeholder="Enter your email" required>
+                            <span class="subscribe__validity"><svg class="error-img" width="11" height="11">
+                                <use href="./crs/images/icons.svg#errorsvg"></use>
+                            </svg>Not a valid email address (example@email.com)</span>
+                        </form>
+                        <button type="button" class="button subscribe__button">Subscribe</button>
+                    </div>
+                    <p class="subscribe-form__text">By subscribing you agree to with our <a class="privacy__link"
+                            href="#" target="_blank" rel="noopener nofollow noreferrer">Privacy Policy</a></p>
+                </div>
             </div>
             <div class="footer__privacy">
-                    <ul class="list privacy__list">
-                        <li class="privacy__item"><a class="privacy__link" href="">Privacy Policy</a></li>
-                        <li class="privacy__item"><a class="privacy__link" href="">Terms of Service</a></li>
-                        <li class="privacy__item"><a class="privacy__link" href="">Cookies Settings</a></li>
-                    </ul>
-                    <p class="footer_licence">2022 FoodSta. All right reserved.</p>
+                <ul class="list privacy__list">
+                    <li class="privacy__item"><a class="privacy__link" href="">Privacy Policy</a></li>
+                    <li class="privacy__item"><a class="privacy__link" href="">Terms of Service</a></li>
+                    <li class="privacy__item"><a class="privacy__link" href="">Cookies Settings</a></li>
+                </ul>
+                <p class="footer_licence">2022 FoodSta. All right reserved.</p>
             </div>
-        
+
 
         </div>
     </footer>
     <script type="module" src="./crs/js/menu.js"></script>
+    <script type="module" src="./crs/js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+function sendEmail() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  axios.post('https://your-server.com/email', {
+    name: name,
+    email: email,
+    message: message
+  })
+  .then(function (response) {
+    console.log(response);
+    alert('Повідомлення відправлено!');
+  })
+  .catch(function (error) {
+    console.log(error);
+    alert('Помилка відправки повідомлення!');
+  });
+}
+</script>
 </body>
 
 </html>
