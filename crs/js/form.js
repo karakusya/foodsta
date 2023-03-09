@@ -4,20 +4,20 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'xoxo.kusya@gmail.com',
-    pass: 'Vb1234er.'
+    pass: 'password'
   }
 });
 
 app.post('/email', (req, res) => {
   const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
+  const email = req.body.tel;
+  const message = req.body.email;
 
   const mailOptions = {
     from: email,
     to: 'katty67kuc@gmail.com',
     subject: 'тема листа',
-    text: 'Ім`я: ${name}\nEmail: ${email}\nПовідомлення: ${message}'
+    text: 'Ім`я: ${name}\ntel: ${tel}\nemail: ${email}'
     };
     
     transporter.sendMail(mailOptions, function(error, info){
