@@ -1,29 +1,29 @@
 "use strict"
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('myForm');
   form.addEventListener('submit', formSend);
 
-  async function formSend (e){
+  async function formSend(e) {
     e.preventDefault();
 
     let error = formValidate(form);
 
     let formData = new formData(form);
-    
+
     if (error === 0) {
       let response = await fatch('sendmail.php', {
         method: 'Post',
-        body:formData;
+        body: formData
       });
       if (response.ok) {
-        let result=await response.json();
+        let result = await response.json();
         alert(result.message);
         form.reset();
-      }else {
+      } else {
         alert("Error")
       }
-    }else {
+    } else {
       alert('Fill in all the required fields')
     }
 
@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', function(){
     let formReq = document.querySelectorAll('._req');
 
 
-    for (let index = 0; index < formReq.length; index++){
+    for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
       formRemoveError(input);
 
-      if(input.classList.contains('_email')) {
+      if (input.classList.contains('_email')) {
         if (emailTest(input)) {
           formAddError(input);
           error++;
