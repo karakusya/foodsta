@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (error === 0) {
       let response = await fatch('sendmail.php', {
         method: 'Post',
-        body:formData
+        body:formData;
       });
       if (response.ok) {
         let result=await response.json();
