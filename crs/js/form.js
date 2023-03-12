@@ -1,32 +1,66 @@
-const nodemailer = require('nodemailer');
+"use strict"
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'xoxo.kusya@gmail.com',
-    pass: 'Vb1234er.'
-  }
-});
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('myForm');
+  form.addEventListener('submit', formSend);
 
-app.post('/email', (req, res) => {
-  const name = req.body.name;
-  const tel = req.body.tel;
-  const email = req.body.email;
+  async function formSend (e){
+    e.preventDefault();
 
-  const mailOptions = {
-    from: email,
-    to: 'xoxo.kusya@gmail.com',
-    subject: 'тема листа',
-    text: 'Ім`я: ${name}\ntel: ${tel}\nemail: ${email}'
-    };
+    let error = formValidate(form);
+
+    let formData = new formData(form);
     
-    transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-    console.log(error);
-    res.status(500).send('Помилка відправки повідомлення!');
-    } else {
-    console.log('Email відправлено: ' + info.response);
-    res.send('Повідомлення відправлено!');
+    if (error === 0) {
+      let response = await fatch('sendmail.php', {
+        method: 'Post',
+        body:formData
+      });
+      if (response.ok) {
+        let result=await response.json();
+        alert(result.message);
+        form.reset();
+      }else {
+        alert("Error")
+      }
+    }else {
+      alert('Fill in all the required fields')
     }
-    });
-    });
+
+
+  }
+
+
+  function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+
+
+    for (let index = 0; index < formReq.length; index++){
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if(input.classList.contains('_email')) {
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      }
+
+
+
+    }
+  }
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+
+  function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
+})

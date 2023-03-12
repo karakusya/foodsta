@@ -68,6 +68,7 @@ max-width: 458px;
 }
 
 .modal__form {
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,10 +118,15 @@ width: 100%;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
-
+outline: transparent;
 padding-top: 14px;
 padding-bottom: 14px;
 padding-left: 12px;
+}
+
+
+.modal__input_error {
+    border-color: #FF705D;
 }
 
 .send__button{
