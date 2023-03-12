@@ -15,7 +15,7 @@ app.post('/email', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'katty67kuc@gmail.com',
+    to: 'xoxo.kusya@gmail.com',
     subject: 'тема листа',
     text: 'Ім`я: ${name}\ntel: ${tel}\nemail: ${email}'
     };
