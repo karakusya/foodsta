@@ -10,8 +10,8 @@ const transporter = nodemailer.createTransport({
 
 app.post('/email', (req, res) => {
   const name = req.body.name;
-  const email = req.body.tel;
-  const message = req.body.email;
+  const tel = req.body.tel;
+  const email = req.body.email;
 
   const mailOptions = {
     from: email,
