@@ -13,8 +13,8 @@
 	$msg="
     Имя: $name /n
     Телефон: $phone /n
-    Почта: $email /n	
-	mail($to, $subject, $msg, "From: $from ");
+    Почта: $email /n	;
+	mail($to, $subject, $msg, "From: $to ");
 
 ?>
 
