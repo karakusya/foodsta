@@ -6,7 +6,6 @@
 	$to = "katty67kuc@gmail.com"; 
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
-	$from = $email;
 	$subject = "Заявка c сайта";
 
 	
@@ -18,4 +17,3 @@
 
 ?>
 
-<p>Привет, форма отправлена</p>

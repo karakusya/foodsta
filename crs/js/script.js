@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
      $(".phone").mask("+380 (99) 999-99-99"); 
     
    
-    jQuery('.send-form').click( function() {
+    jQuery('.send__button').click( function() {
     	var form = jQuery(this).closest('form');
     	
     	if ( form.valid() ) {
@@ -21,9 +21,9 @@ jQuery(document).ready(function () {
                     //form.find('.status').html('форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
     			},
-    			error:	 function() {
-    			     form.find('.status').html('серверная ошибка');
-    			}
+    			// error:	 function() {
+    			//      form.find('.status').html('серверная ошибка');
+    			// }
     		});
     	}
     });
