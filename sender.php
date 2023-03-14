@@ -2,9 +2,9 @@
 use PHPMailer\src\PHPMailer;
 use PHPMailer\src\Exception;
 
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
+require 'PHPMailer\src\PHPMailer.php';
+require 'PHPMailer\src\SMTP.php';
+require 'PHPMailer\src\Exception.php';
 
 
 // Отримання даних форми
