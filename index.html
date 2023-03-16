@@ -412,17 +412,24 @@
                         <use href="./crs/images/icons.svg#icon-close_menu"></use>
                     </svg>
                 </button>
-                <form class="modal__form" id="contact-form" action="#" method="post">
+                <form class="modal__form" id="contact-form" onsubmit="sendEmail(); reset(); return false;">
                     <strong class="modal__title">Order Form</strong>
-                    <label for="name" class="modal__label">Name</label>
-                    <input type="text" id="name" name="name" class="modal__input" placeholder="Your name" required>
-                    <label for="tel" class="modal__label">Phone number</label>
-                    <input type="tel" id="tel" name="tel" inputmode="tel" class="phone modal__input"
-                        placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required>
-                    <label for="email" class="modal__label">E-mail</label>
-                    <input type="email" id="email" name="email" inputmode="email" class="modal__input"
-                        placeholder="example@gmail.com" required>
-                    <button type="submit" class="send__button">Send</button>
+                    <div class="modal__form-item">
+                        <label for="name" class="modal__label">Name</label>
+                        <input type="text" id="name" name="name" class="modal__input" placeholder="Your name" required>
+                    </div>
+                    <div class="modal__form-item">
+                        <label for="tel" class="modal__label">Phone number</label>
+                        <input type="tel" id="tel" name="tel" inputmode="tel" class="tel modal__input"
+                            placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required _req>
+                    </div>
+                    <div class="modal__form-item">    
+                        <label for="email" class="modal__label">E-mail</label>
+                        <input type="email" id="email" name="email" inputmode="email" class="modal__input email"
+                            placeholder="example@gmail.com" required _req>
+                    </div>    
+                    
+                        <button type="submit" class="send__button">Send</button>
                 </form>
 
             </div>
@@ -478,7 +485,28 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./crs/js/menu.js"></script>
     <script src="./crs/js/modal.js"></script>
-    <script src="./crs/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "katty67kuc@gmail.com",
+                Password: "5CCD86AD88D9A6A1BCA5C1575FA937BF4524",
+                To: 'katty67kuc@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "This is the subject",
+                Body: "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone number: " + document.getElementById("tel").value
+            }).then(
+                message => alert("Your Data Sent Successfully")
+            );
+
+
+
+
+        }
+    </script>
 </body>
 
 </html>
