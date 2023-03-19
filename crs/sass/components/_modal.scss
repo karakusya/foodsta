@@ -22,22 +22,22 @@
 }
 
 .modal {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%) scale(1);
- padding: 32px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 32px 20px;
 
- background: $yellow;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-border-radius: 30px;
-width: 100%;
-max-width: 458px;
+    background: $yellow;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 458px;
 
 
-@include mq(tab) {
-    padding: 32px;
-}
+    @include mq(tab) {
+        padding: 32px;
+    }
 }
 
 .close-modal {
@@ -56,7 +56,9 @@ max-width: 458px;
     cursor: pointer;
     transition: fill $transition $timing-function;
     z-index: 1000000;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         fill: #597D00;
     }
 }
@@ -66,60 +68,61 @@ max-width: 458px;
 }
 
 .modal__form {
-   
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.modal__title{
+.modal__title {
     font-weight: 700;
-font-size: 24px;
-line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.2;
     text-align: center;
 
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .modal__form-group {
-margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .modal__form-item {
 
 
- &:not(:last-child){
-    margin-bottom: 20px;
-    @include mq(tab) {
-        margin-bottom: 24px;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include mq(tab) {
+            margin-bottom: 24px;
+        }
     }
- }
 
 
 }
 
 .modal__label {
     font-weight: 500;
-font-size: 16px;
-line-height: 1.4;
-margin-bottom: 2px;
-margin-left: 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+    margin-left: 12px;
 }
 
 .modal__input {
-    
+
     background: #FFFFFF;
-border: 1px solid $dark-green;
-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
-border-radius: 30px;
-width: 100%;
+    border: 1px solid $dark-green;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
-outline: transparent;
-padding-top: 14px;
-padding-bottom: 14px;
-padding-left: 12px;
+    outline: transparent;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 12px;
 }
 
 
@@ -127,7 +130,7 @@ padding-left: 12px;
     border-color: #FF705D;
 }
 
-.send__button{
+.send__button {
     width: 106px;
     height: 40px;
     text-align: center;
@@ -135,16 +138,17 @@ padding-left: 12px;
     border: 2px solid #7EB101;
     border-radius: 30px;
     font-weight: 500;
-font-size: 13px;
-line-height: 1.5;
-margin-left: auto;
-margin-right: auto;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
 
-transition: border-color $transition $timing-function;
+    transition: border-color $transition $timing-function;
 
-&:hover, &:focus {
-    border-color: #597D00;
-}
+    &:hover,
+    &:focus {
+        border-color: #597D00;
+    }
 
 }
 
@@ -153,38 +157,38 @@ transition: border-color $transition $timing-function;
     position: absolute;
     top: 50%;
     left: 50%;
-   
+
     background: $yellow;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-   border-radius: 30px;
-   width: 100%;
-   height: 450px;
-   max-width: 458px;
-   
-   
-   @include mq(tab) {
-       padding: 32px;
-   }
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    width: 100%;
+    height: 450px;
+    max-width: 458px;
+
+
+    @include mq(tab) {
+        padding: 32px;
+    }
 }
 
 .modal2__container {
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal2__title {
     font-weight: 700;
-font-size: 24px;
-line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.2;
     text-align: center;
 
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .modal2__text {
-text-align: center;
+    text-align: center;
 }

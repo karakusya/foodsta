@@ -114,7 +114,7 @@
                         <source media="(max-width: 767px)"
                             srcset="./crs/images/offerings/apple-mob@1x_sm.png 1x, ./crs/images/offerings/apple-mob@2x_sm.png 2x"
                             type="image/png">
-                        <img src="./crs/images/offerings/apple-mob@1x_sm.png" alt="apple" width="550" height="550" />
+                        <img src="./crs/images/offerings/apple-mob@1x_sm.png" alt="apple" width="550" height="550">
                     </picture>
                 </div>
                 <div class="offerings__wrapper">
@@ -178,7 +178,7 @@
                                 srcset="./crs/images/favorites/favorites1sm@1x.png 1x, ./crs/images/favorites/favorites1sm@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites1lg@1x.png" alt="dish1">
                         </picture>
                     </li>
                     <li class="favorites__item">
@@ -204,7 +204,7 @@
                                 srcset="./crs/images/favorites/favorites2sm@1x.png 1x, ./crs/images/favorites/favorites2sm@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites2lg@1x.png" alt="dish2">
                         </picture>
                     </li>
                     <li class="favorites__item">
@@ -230,7 +230,7 @@
                                 srcset="./crs/images/favorites/favorites3sm@1x.png 1x, ./crs/images/favorites/favorites3sm@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites3lg@1x.png" alt="dish3">
                         </picture>
                     </li>
                     <li class="favorites__item">
@@ -249,7 +249,7 @@
                                 srcset="./crs/images/favorites/favorites4md@1x.png 1x, ./crs/images/favorites/favorites4md@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites4lg@1x.png" alt="dish4">
                         </picture>
                     </li>
                     <li class="favorites__item">
@@ -268,7 +268,7 @@
                                 srcset="./crs/images/favorites/favorites5md@1x.png 1x, ./crs/images/favorites/favorites5md@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites5lg@1x.png" alt="dish5">
                         </picture>
                     </li>
                     <li class="favorites__item">
@@ -287,7 +287,7 @@
                                 srcset="./crs/images/favorites/favorites6md@1x.png 1x, ./crs/images/favorites/favorites6md@2x.png 2x"
                                 type="image/png">
 
-                            <img src="" alt="">
+                            <img src="./crs/images/favorites/favorites6lg@1x.png" alt="dish6">
                         </picture>
                     </li>
                 </ul>
@@ -319,9 +319,12 @@
                         <p class="review__text">“The Best app I have used to order food in a while, so many options to
                             choose from too, I would recommend to a freind, No questions asked”</p>
                         <div class="customer__info">
-                            <img scr="./crs/images/customers/boy@1x.png"
-                                srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x"
-                                type="image/png" alt="boy" width="48" height="48">
+                            <picture>
+                                <source srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x"
+                                type="image/png" width="48" height="48">
+
+                                <img src="./crs/images/customers/boy@1x.png" alt="client photo">
+                            </picture>
                             <div class="customer__content">
                                 <p class="customer__name">Sumith Shah</p>
                                 <p class="customer__status">Some Dude</p>
@@ -349,9 +352,11 @@
                         <p class="review__text">“The ease with which I can just go in and order what i want was amazing,
                             It has been a very pleasant experience ordering from this app”</p>
                         <div class="customer__info">
-                            <img scr="./crs/images/customers/girl@1x.png"
-                                srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x"
-                                type="image/png" alt="girl" width="48" height="48">
+                            <picture>
+                                <source srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x"
+                                type="image/png" width="48" height="48">
+                                <img src="./crs/images/customers/girl@1x.png" alt="customer photo">
+                            </picture>
                             <div class="customer__content">
                                 <p class="customer__name">Sumith Shah</p>
                                 <p class="customer__status">Some Dude</p>
@@ -405,7 +410,7 @@
 
             </div>
         </section>
-        <div class="backdrop" id="form-modal" >
+        <div class="backdrop" id="form-modal">
             <div class="modal">
                 <button type="button" class="close-modal">
                     <svg width="24" height="24">
@@ -423,12 +428,12 @@
                     <div class="modal__form-item">
                         <label for="tel" class="modal__label">Phone number</label>
                         <input type="tel" id="tel" name="data[tel]" inputmode="tel" class="tel modal__input"
-                            placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required _req>
+                            placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required >
                     </div>
                     <div class="modal__form-item">
                         <label for="email" class="modal__label">E-mail</label>
                         <input type="email" id="email" name="data[email]" inputmode="email" class="modal__input email"
-                            placeholder="example@gmail.com" required _req>
+                            placeholder="example@gmail.com" required >
                     </div>
                     <button type="submit" class="send__button" id="send-btn">Send</button>
                 </form>
@@ -499,7 +504,7 @@
     <script src="./crs/js/menu.js"></script>
     <script src="./crs/js/modal.js"></script>
     <script src="./crs/js/modalsend.js"></script>
-    
+
 </body>
 
 </html>
