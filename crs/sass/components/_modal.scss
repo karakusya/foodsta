@@ -9,17 +9,15 @@
 
     background: rgba(94, 99, 99, 0.7);
 
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
+    opacity: 0;
+    pointer-events: none;
 
     transition: opacity $transition $timing-function, visibility $transition $timing-function;
 
 
-    &.backdrop--hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+    &.modal-active {
+        opacity: 1;
+        pointer-events: all;
     }
 }
 
@@ -57,7 +55,7 @@ max-width: 458px;
     justify-content: center;
     cursor: pointer;
     transition: fill $transition $timing-function;
-
+    z-index: 1000000;
     &:hover, &:focus {
         fill: #597D00;
     }
@@ -148,4 +146,45 @@ transition: border-color $transition $timing-function;
     border-color: #597D00;
 }
 
+}
+
+.modal2 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    background: $yellow;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+   border-radius: 30px;
+   width: 100%;
+   height: 450px;
+   max-width: 458px;
+   
+   
+   @include mq(tab) {
+       padding: 32px;
+   }
+}
+
+.modal2__container {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.modal2__title {
+    font-weight: 700;
+font-size: 24px;
+line-height: 1.2;
+    text-align: center;
+
+margin-bottom: 20px;
+}
+
+.modal2__text {
+text-align: center;
 }

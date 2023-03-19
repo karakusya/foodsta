@@ -27,7 +27,7 @@
                     <li class="nav__item">Feedback</li>
                     <li class="nav__item">Subscribe</li>
                 </ul>
-                <button class="button nav-button order-button" data-modal-open>Order now</button>
+                <button class="button nav-button order-button">Order now</button>
             </div>
             <button class="menu-open" type="button" data-menu-open>
                 <svg width="28" height="28" class="header__menu">
@@ -62,7 +62,7 @@
                     <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
                         enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum
                         nulla, ut commodo diam libero vitae erat.</p>
-                    <button class="button hero-button order-button" data-modal-open>Order now</button>
+                    <button class="button hero-button order-button">Order now</button>
                 </div>
                 <div class="swiper-container">
                     <div class="swiper">
@@ -142,7 +142,7 @@
                                 varius enim in eros.</p>
                         </li>
                     </ul>
-                    <button class="button order-button" data-modal-open>Order now</button>
+                    <button class="button order-button">Order now</button>
                     <a class="link offerings__link" href="">Read More<svg width="13" height="13">
                             <use href="./crs/images/icons.svg#right-arrow"></use>
                         </svg></a>
@@ -405,9 +405,9 @@
 
             </div>
         </section>
-        <div class="backdrop backdrop--hidden" data-modal>
+        <div class="backdrop" id="form-modal" >
             <div class="modal">
-                <button type="button" class="close-modal" data-modal-close>
+                <button type="button" class="close-modal">
                     <svg width="24" height="24">
                         <use href="./crs/images/icons.svg#icon-close_menu"></use>
                     </svg>
@@ -430,9 +430,21 @@
                         <input type="email" id="email" name="data[email]" inputmode="email" class="modal__input email"
                             placeholder="example@gmail.com" required _req>
                     </div>
-                    <button type="submit" class="send__button">Send</button>
+                    <button type="submit" class="send__button" id="send-btn">Send</button>
                 </form>
-
+            </div>
+        </div>
+        <div class="backdrop" id="success-modal">
+            <div class="modal">
+                <button type="button" class="close-modal success-close">
+                    <svg width="24" height="24">
+                        <use href="./crs/images/icons.svg#icon-close_menu"></use>
+                    </svg>
+                </button>
+                <div class="modal2_container">
+                    <h3 class="modal2__title">Your contact information sent successfully</h3>
+                    <p class="modal2__text">Our manager will call you soon</p>
+                </div>
             </div>
         </div>
     </main>
@@ -486,21 +498,8 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./crs/js/menu.js"></script>
     <script src="./crs/js/modal.js"></script>
-    <script>
-        var form = document.getElementById('modal-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("modal-form")),
-            }).then(
-                Response => response.json()
-            ).then((html) => {
-                window.open('index.html', '_blank');
-
-            });
-        });
-    </script>
+    <script src="./crs/js/modalsend.js"></script>
+    
 </body>
 
 </html>
