@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.min.css">
     <link rel="stylesheet" href="./modern-normalise.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
 </head>
 
 <body>
@@ -320,8 +322,9 @@
                             choose from too, I would recommend to a freind, No questions asked”</p>
                         <div class="customer__info">
                             <picture>
-                                <source srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x"
-                                type="image/png" width="48" height="48">
+                                <source
+                                    srcset="./crs/images/customers/boy@1x.png 1x, ./crs/images/customers/boy@2x.png 2x"
+                                    type="image/png" width="48" height="48">
 
                                 <img src="./crs/images/customers/boy@1x.png" alt="client photo">
                             </picture>
@@ -353,8 +356,9 @@
                             It has been a very pleasant experience ordering from this app”</p>
                         <div class="customer__info">
                             <picture>
-                                <source srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x"
-                                type="image/png" width="48" height="48">
+                                <source
+                                    srcset="./crs/images/customers/girl@1x.png 1x, ./crs/images/customers/girl@2x.png 2x"
+                                    type="image/png" width="48" height="48">
                                 <img src="./crs/images/customers/girl@1x.png" alt="customer photo">
                             </picture>
                             <div class="customer__content">
@@ -427,13 +431,13 @@
                     </div>
                     <div class="modal__form-item">
                         <label for="tel" class="modal__label">Phone number</label>
-                        <input type="tel" id="tel" name="data[tel]" inputmode="tel" class="tel modal__input"
-                            placeholder="+38(0 _ _ ) _ _ _  _ _  _ _" required >
+                        <input type="tel" id="phone" name="data[tel]" inputmode="tel" class="tel modal__input"
+                            required>
                     </div>
                     <div class="modal__form-item">
                         <label for="email" class="modal__label">E-mail</label>
                         <input type="email" id="email" name="data[email]" inputmode="email" class="modal__input email"
-                            placeholder="example@gmail.com" required >
+                            placeholder="example@gmail.com" required>
                     </div>
                     <button type="submit" class="send__button" id="send-btn">Send</button>
                 </form>
@@ -504,7 +508,11 @@
     <script src="./crs/js/menu.js"></script>
     <script src="./crs/js/modal.js"></script>
     <script src="./crs/js/modalsend.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input);
+    </script>
 </body>
 
 </html>
